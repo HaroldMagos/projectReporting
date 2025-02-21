@@ -4,37 +4,90 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background: #f0f2f5;
-    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 .container {
     text-align: center;
-    background: white;
+    background: rgba(255, 255, 255, 0.1);
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s;
+    max-width: 90%;
+    width: 350px;
+}
+
+.container:hover {
+    transform: translateY(-10px);
 }
 
 h1 {
     margin-bottom: 20px;
-    color: #333;
+    color: #00c6ff;
+    text-shadow: 0 0 5px #00c6ff, 0 0 10px #00c6ff;
+    font-size: 2em;
+    letter-spacing: 2px;
 }
 
 .action-btn {
     display: block;
-    width: 150px;
+    width: 80%;
+    max-width: 200px;
     padding: 10px;
-    margin: 10px auto;
-    background: #4CAF50;
+    margin: 15px auto;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s;
+    font-size: 18px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .action-btn:hover {
-    background: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.action-btn:active {
+    transform: scale(0.95);
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    .action-btn {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+/* Neon Border Animation */
+.container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5, #00c6ff, #ff6ec4);
+    border-radius: 15px;
+    z-index: -1;
+    filter: blur(10px);
+    animation: neon-border 5s linear infinite;
+}
+
+@keyframes neon-border {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
 }
