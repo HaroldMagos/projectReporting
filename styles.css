@@ -1,120 +1,41 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background: radial-gradient(circle at top, #1A1A2E, #16213E, #0F3460);
-    font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
-    color: #FFFFFF;
-}
+   
+       /* Futuristic Neon Theme */
+       body {
+           font-family: 'Arial', sans-serif;
+           text-align: center;
+           padding: 10px;
+           background: linear-gradient(135deg, #000814, #001f3f);
+           color: #00aaff;
+       }
 
-.container {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(15px);
-    transition: transform 0.4s;
-    width: 90%;
-    max-width: 380px;
-    position: relative;
-    overflow: hidden;
-}
 
-.container:hover {
-    transform: translateY(-10px);
-}
+       h2 {
+           font-size: 5rem;
+           color: #00ccff;
+           text-shadow: 0px 0px 15px #00ccff;
+           font-weight: bold;
+       }
 
-h1 {
-    margin-bottom: 30px;
-    color: #0066ff;
-    text-shadow: 0 0 10px #00E6FF, 0 0 20px #00E6FF;
-    font-size: 4em;
-    letter-spacing: 2px;
-}
 
-.button-group {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+       .button {
+           display: inline-block;
+           margin: 10px;
+           padding: 50px;
+           font-size: 50px;
+           color: #fff;
+           background: #011f4d;
+           border: none;
+           cursor: pointer;
+           text-decoration: none;
+           border-radius: 20px;
+           box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.8);
+           transition: all 0.3s ease-in-out;
+       }
 
-.action-btn {
-    width: 100%;
-    padding: 15px;
-    background: linear-gradient(45deg, #FF3CAC, #784BA0, #2B86C5);
-    color: white;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 50px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
 
-.action-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-    border-radius: 30px;
-    transition: opacity 0.3s;
-    opacity: 0;
-    z-index: -1;
-}
-
-.action-btn:hover::before {
-    opacity: 1;
-}
-
-.action-btn:hover {
-    transform: scale(1.08);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
-}
-
-.action-btn:active {
-    transform: scale(0.98);
-}
-
-@media screen and (max-width: 600px) {
-    h1 {
-        font-size: 2em;
-    }
-    .action-btn {
-        font-size: 16px;
-        padding: 12px;
-    }
-}
-
-/* Futuristic Neon Border Animation */
-.container::before {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    background: linear-gradient(45deg, #FF3CAC, #784BA0, #2B86C5, #FF3CAC);
-    border-radius: 20px;
-    z-index: -2;
-    filter: blur(20px);
-    animation: neon-border 6s linear infinite;
-}
-
-@keyframes neon-border {
-    0% {
-        filter: hue-rotate(0deg);
-    }
-    100% {
-        filter: hue-rotate(360deg);
-    }
-}
+       .button:hover {
+           box-shadow: 0px 0px 25px rgba(0, 170, 255, 1);
+           background: linear-gradient(135deg, #023c96, #001f3f);
+           transform: translateY(-5px);
+       }
+   
