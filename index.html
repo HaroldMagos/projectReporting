@@ -1,23 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <base target="_top">
+   <style>
+       /* Futuristic Neon Theme */
+       body {
+           font-family: 'Arial', sans-serif;
+           text-align: center;
+           padding: 10px;
+           background: linear-gradient(135deg, #000814, #001f3f);
+           color: #00aaff;
+       }
+
+
+       h2 {
+           font-size: 5rem;
+           color: #00ccff;
+           text-shadow: 0px 0px 15px #00ccff;
+           font-weight: bold;
+       }
+
+
+       .button {
+           display: inline-block;
+           margin: 10px;
+           padding: 50px;
+           font-size: 50px;
+           color: #fff;
+           background: #011f4d;
+           border: none;
+           cursor: pointer;
+           text-decoration: none;
+           border-radius: 20px;
+           box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.8);
+           transition: all 0.3s ease-in-out;
+       }
+
+
+       .button:hover {
+           box-shadow: 0px 0px 25px rgba(0, 170, 255, 1);
+           background: linear-gradient(135deg, #023c96, #001f3f);
+           transform: translateY(-5px);
+       }
+   </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Dashboard</h1>
-        <div class="button-group">
-            <button class="action-btn" onclick="goToLink('https://script.google.com/macros/s/AKfycbyXDisqj9i_C4K4bljL8YVBpnyd-wHZzBYnsIyh2x-QXMU4p5QzxKt43n3HYd5FdkWg/exec')">Report</button>
-            <button class="action-btn" onclick="goToLink('https://script.google.com/macros/s/AKfycbwI1hKW6wb15uSmYgZNVzVxWulFFx_M85_4RL8UjSuoJYXesv3z0R1Oc-MF1tv1XjJe/exec')">Viewer</button>
-        </div>
-    </div>
-    <script>
-        function goToLink(url) {
-            window.open(url, '_blank');
-        }
-    </script>
+
+
+   <h2>Daily Report Dashboard</h2>
+
+
+<div style="display: flex; justify-content: center; gap: 20%; margin-top: 20px;">
+ <a class="button" href="https://script.google.com/macros/s/AKfycbyXDisqj9i_C4K4bljL8YVBpnyd-wHZzBYnsIyh2x-QXMU4p5QzxKt43n3HYd5FdkWg/exec" target="_blank">
+   Login and Submit Reports
+ </a>
+
+
+ <a class="button" href="https://script.google.com/macros/s/AKfycbwI1hKW6wb15uSmYgZNVzVxWulFFx_M85_4RL8UjSuoJYXesv3z0R1Oc-MF1tv1XjJe/exec" target="_blank">
+   Filter and View Reports
+ </a>
+</div>
+
+
 </body>
 </html>
